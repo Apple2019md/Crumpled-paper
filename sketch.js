@@ -13,7 +13,7 @@ function preload()
 }
 
 function setup() {
-	createCanvas(1100, 900);
+	createCanvas(1100, 700);
 
 
 	engine = Engine.create();
@@ -33,8 +33,8 @@ function setup() {
 	
 	
 	groundObj = new Ground(width/2, 670, width, 20);
-	leftSide = new Ground(1100, 600, 20, 120);
-	rightSide = new Ground(1000, 600, 20, 120);
+	leftSide = new Ground(700, 600, 20, 120);
+	rightSide = new Ground(950, 600, 20, 120);
 
 	Engine.run(engine);
   
@@ -46,6 +46,8 @@ function draw() {
   background(0);
   
   groundObj.display();
+  leftSide.display();
+  rightSide.display();
 
   drawSprites();
   Engine.update(engine);
